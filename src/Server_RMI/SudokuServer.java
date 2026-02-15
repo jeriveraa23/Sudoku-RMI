@@ -12,6 +12,9 @@ import java.rmi.registry.Registry;
 
 public class SudokuServer{
     public static void main(String[] args) throws RemoteException{
+
+        System.setProperty("java.rmi.server.hostname", "127.0.0.1");
+        
         Registry reg = LocateRegistry.createRegistry(1099);
 
         SudokuImplement sudokuImplement = new SudokuImplement(0);

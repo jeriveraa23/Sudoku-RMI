@@ -128,15 +128,25 @@ public class SudokuClient {
      * Muestra la matriz en formato legible
      */
     private static void mostrarMatriz(int[][] matriz, String descripcion) {
-        if (matriz == null) {
-            System.out.println("Error: La matriz es nula.");
-            return;
-        }
+        if (matriz == null) return;
         
+        int n = matriz.length;
+        int raiz = (int) Math.sqrt(n);
+
         System.out.println("\n========= MATRIZ " + descripcion + " =========");
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                System.out.printf("%3d ", matriz[i][j]);
+        
+        for (int i = 0; i < n; i++) {
+            // Imprimir línea horizontal divisoria de bloques
+            if (i > 0 && i % raiz == 0) {
+                System.out.println("-".repeat(n * 4 + raiz));
+            }
+
+            for (int j = 0; j < n; j++) {
+                // Imprimir línea vertical divisoria de bloques
+                if (j > 0 && j % raiz == 0) {
+                    System.out.print("| ");
+                }
+                System.out.printf("%2d ", matriz[i][j]);
             }
             System.out.println();
         }

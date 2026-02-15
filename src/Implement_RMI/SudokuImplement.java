@@ -40,11 +40,14 @@ public class SudokuImplement extends UnicastRemoteObject implements SudokuInterf
         return crearMatriz(16);
     }
 
-    private int[][] crearMatriz(int n){
+    private int[][] crearMatriz(int n) {
         int[][] m = new int[n][n];
-        for (int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++){
-                m[i][j] = (i + j) % n + 1;
+        int raiz = (int) Math.sqrt(n); 
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+              
+                m[i][j] = ((i * raiz + i / raiz + j) % n) + 1;
             }
         }
         return m;
