@@ -46,6 +46,11 @@ public class SudokuClient {
                         generarYMostrar(16, "16x16");
                         break;
                     case 4:
+                        // NUEVA FUNCIONALIDAD: Consultar estadísticas
+                        System.out.println("\nSolicitando reporte al servidor...");
+                        System.out.println(sudoku.obtenerEstadisticas());
+                        break;
+                    case 5:
                         System.out.println("¡Hasta luego!");
                         break;
                     default:
@@ -84,7 +89,8 @@ public class SudokuClient {
         System.out.println("1. Matriz 4x4");
         System.out.println("2. Matriz 9x9");
         System.out.println("3. Matriz 16x16");
-        System.out.println("4. Salir");
+        System.out.println("4. Ver estadísticas de uso del servidor");
+        System.out.println("5. Salir");
         System.out.print("Seleccione una opción: ");
     }
     
@@ -124,9 +130,6 @@ public class SudokuClient {
         }
     }
     
-    /**
-     * Muestra la matriz en formato legible
-     */
     private static void mostrarMatriz(int[][] matriz, String descripcion) {
         if (matriz == null) return;
         
