@@ -4,7 +4,7 @@
 <img width="791" height="744" alt="image" src="https://github.com/user-attachments/assets/ebd993e2-1aee-4d7a-b149-bb76732118cb" />
 
 
-Punto 2. Ejemplo de SOA.
+`Punto 2. Ejemplo de SOA.`
  Arquitectura elegida: SOA (Service-Oriented Architecture)
 
 Ventajas
