@@ -23,7 +23,7 @@ Un sistema de universidad expone servicios independientes:
 
 Cada aplicacion (portal web, app movil, sistemas internos) consume estos servicios via HTTP/REST. Si cambia el Servicio de Pagos, el resto del sistema sigue funcionando mientras la interfaz del servicio se mantenga.
 
-`Punto 2. Funcionalidades extra.`
+`Punto 3. Funcionalidades extra.`
 
 * **Estadísticas de Uso:** El servidor ahora rastrea cuántas matrices de cada tipo se han generado. Esto permite auditoría de carga en tiempo real mediante el método remoto `obtenerEstadisticas()`.
 * **Métrica de Latencia:** Se implementó un cálculo de tiempo de respuesta (RTT) en el cliente. Al generar cada Sudoku, se muestra el tiempo exacto en milisegundos que tardó la comunicación red-servidor.
