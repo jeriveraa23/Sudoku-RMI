@@ -1,10 +1,10 @@
 package Client_RMI;
 
 import Interface_RMI.SudokuInterface;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.Scanner;
 
 
@@ -112,6 +112,8 @@ public class SudokuClient {
     private static void generarYMostrar(int tamaño, String descripcion) throws RemoteException {
         try {
             int[][] matriz = null;
+
+            long tiempoInicio = System.currentTimeMillis();
             
             System.out.println("\nGenerando matriz " + descripcion + "...\n");
             
@@ -122,8 +124,13 @@ public class SudokuClient {
             } else if (tamaño == 16) {
                 matriz = sudoku.generar16x16();
             }
+
+            long tiempoFin = System.currentTimeMillis();
+            long latencia = tiempoFin - tiempoInicio;
             
             mostrarMatriz(matriz, descripcion);
+
+            System.out.println("MÉTRICA DE RED: Respuesta recibida en " + latencia + " ms.");
             
         } catch (RemoteException e) {
             System.out.println("Error al generar la matriz: " + e.getMessage());
