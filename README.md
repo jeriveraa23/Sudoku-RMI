@@ -1,4 +1,4 @@
-Punto 1. Diagrama de Clases.
+### `Punto 1. Diagrama de Clases.`
 
 
 <img width="791" height="744" alt="image" src="https://github.com/user-attachments/assets/ebd993e2-1aee-4d7a-b149-bb76732118cb" />
