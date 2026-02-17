@@ -5,6 +5,7 @@
 
 
 `Punto 2. Ejemplo de SOA.`
+
  Arquitectura elegida: SOA (Service-Oriented Architecture)
 
 Ventajas
